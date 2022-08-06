@@ -13,7 +13,7 @@ struct iosMyinstaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
