@@ -14,6 +14,7 @@ struct SignInView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                // Background mix color
                 LinearGradient(gradient: Gradient(colors: [Utilits.colorOne, Utilits.colorTwo]),
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing
@@ -24,19 +25,19 @@ struct SignInView: View {
                     
                     // TextField and SecureField
                     Group {
-                        Text("Instagram")
-                            .font(.largeTitle)
+                        Text("app_name")
+                            .font(Font.custom("Billabong", size: 75))
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
-                            .padding(.bottom, 20)
+                            .padding(.bottom, 15)
                         
-                        TextField("Email", text: $email)
+                        TextField("email", text: $email)
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
                             .cornerRadius(8)
                         
-                        SecureField("Password", text: $password)
+                        SecureField("password", text: $password)
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
@@ -49,7 +50,7 @@ struct SignInView: View {
                     } label: {
                         HStack{
                             Spacer()
-                            Text("Sign In")
+                            Text("sign_in")
                                 .fontWeight(.semibold)
                             Spacer()
                         }
@@ -67,12 +68,12 @@ struct SignInView: View {
                     // Text and Sign Up button on bottom
                     VStack {
                         HStack {
-                            Text("Don't have an account?")
+                            Text("dont_have_account")
                                 .foregroundColor(.white)
                             NavigationLink {
                                 SignUpView()
                             } label: {
-                                Text("Sign Up")
+                                Text("sign_up")
                                     .foregroundColor(.white)
                                     .fontWeight(.semibold)
                             }
@@ -84,11 +85,13 @@ struct SignInView: View {
             }
             .edgesIgnoringSafeArea(.all)
         }
+        .accentColor(.white)
     }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+            .environment(\.locale, .init(identifier: "en"))
     }
 }

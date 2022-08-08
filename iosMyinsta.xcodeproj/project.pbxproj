@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E39EE263289EA6D600EA0E7E /* iosMyinstaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE262289EA6D600EA0E7E /* iosMyinstaApp.swift */; };
-		E39EE265289EA6D600EA0E7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE264289EA6D600EA0E7E /* ContentView.swift */; };
 		E39EE267289EA6D600EA0E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39EE266289EA6D600EA0E7E /* Assets.xcassets */; };
 		E39EE26A289EA6D600EA0E7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39EE269289EA6D600EA0E7E /* Preview Assets.xcassets */; };
 		E39EE26C289EA6D600EA0E7E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE26B289EA6D600EA0E7E /* Persistence.swift */; };
@@ -17,12 +16,14 @@
 		E39EE27A289EA75200EA0E7E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE279289EA75200EA0E7E /* SignInView.swift */; };
 		E39EE27C289EB73600EA0E7E /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE27B289EB73600EA0E7E /* Utilits.swift */; };
 		E39EE27E289EBCC100EA0E7E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE27D289EBCC100EA0E7E /* SignUpView.swift */; };
+		E39EE282289EE55200EA0E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E39EE284289EE55200EA0E7E /* Localizable.strings */; };
+		E39EE289289EE8FA00EA0E7E /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39EE288289EE8F100EA0E7E /* Billabong.ttf */; };
+		E39EE28C289EFBCB00EA0E7E /* SelectLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39EE28B289EFBCB00EA0E7E /* SelectLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E39EE25F289EA6D600EA0E7E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39EE262289EA6D600EA0E7E /* iosMyinstaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosMyinstaApp.swift; sourceTree = "<group>"; };
-		E39EE264289EA6D600EA0E7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E39EE266289EA6D600EA0E7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E39EE269289EA6D600EA0E7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E39EE26B289EA6D600EA0E7E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -31,6 +32,12 @@
 		E39EE279289EA75200EA0E7E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E39EE27B289EB73600EA0E7E /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
 		E39EE27D289EBCC100EA0E7E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E39EE283289EE55200EA0E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E39EE285289EE56D00EA0E7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E39EE286289EE58D00EA0E7E /* uz-UZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "uz-UZ"; path = "uz-UZ.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E39EE288289EE8F100EA0E7E /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		E39EE28A289EE9B400EA0E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E39EE28B289EFBCB00EA0E7E /* SelectLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +70,12 @@
 		E39EE261289EA6D600EA0E7E /* iosMyinsta */ = {
 			isa = PBXGroup;
 			children = (
-				E39EE276289EA70E00EA0E7E /* Utilits */,
 				E39EE275289EA70200EA0E7E /* Views */,
+				E39EE276289EA70E00EA0E7E /* Utilits */,
+				E39EE27F289EE4FA00EA0E7E /* Languages */,
+				E39EE287289EE8C300EA0E7E /* Fonts */,
 				E39EE262289EA6D600EA0E7E /* iosMyinstaApp.swift */,
+				E39EE28A289EE9B400EA0E7E /* Info.plist */,
 				E39EE266289EA6D600EA0E7E /* Assets.xcassets */,
 				E39EE26B289EA6D600EA0E7E /* Persistence.swift */,
 				E39EE26D289EA6D600EA0E7E /* iosMyinsta.xcdatamodeld */,
@@ -85,7 +95,6 @@
 		E39EE275289EA70200EA0E7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E39EE264289EA6D600EA0E7E /* ContentView.swift */,
 				E39EE277289EA74A00EA0E7E /* StarterView.swift */,
 				E39EE279289EA75200EA0E7E /* SignInView.swift */,
 				E39EE27D289EBCC100EA0E7E /* SignUpView.swift */,
@@ -99,6 +108,23 @@
 				E39EE27B289EB73600EA0E7E /* Utilits.swift */,
 			);
 			path = Utilits;
+			sourceTree = "<group>";
+		};
+		E39EE27F289EE4FA00EA0E7E /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				E39EE28B289EFBCB00EA0E7E /* SelectLanguage.swift */,
+				E39EE284289EE55200EA0E7E /* Localizable.strings */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		E39EE287289EE8C300EA0E7E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E39EE288289EE8F100EA0E7E /* Billabong.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +169,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				"uz-UZ",
 			);
 			mainGroup = E39EE256289EA6D500EA0E7E;
 			productRefGroup = E39EE260289EA6D600EA0E7E /* Products */;
@@ -160,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E39EE26A289EA6D600EA0E7E /* Preview Assets.xcassets in Resources */,
+				E39EE282289EE55200EA0E7E /* Localizable.strings in Resources */,
 				E39EE267289EA6D600EA0E7E /* Assets.xcassets in Resources */,
+				E39EE289289EE8FA00EA0E7E /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +204,7 @@
 				E39EE27A289EA75200EA0E7E /* SignInView.swift in Sources */,
 				E39EE26C289EA6D600EA0E7E /* Persistence.swift in Sources */,
 				E39EE278289EA74A00EA0E7E /* StarterView.swift in Sources */,
-				E39EE265289EA6D600EA0E7E /* ContentView.swift in Sources */,
+				E39EE28C289EFBCB00EA0E7E /* SelectLanguage.swift in Sources */,
 				E39EE27E289EBCC100EA0E7E /* SignUpView.swift in Sources */,
 				E39EE27C289EB73600EA0E7E /* Utilits.swift in Sources */,
 				E39EE263289EA6D600EA0E7E /* iosMyinstaApp.swift in Sources */,
@@ -184,11 +214,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E39EE284289EE55200EA0E7E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E39EE283289EE55200EA0E7E /* en */,
+				E39EE285289EE56D00EA0E7E /* ru */,
+				E39EE286289EE58D00EA0E7E /* uz-UZ */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E39EE270289EA6D600EA0E7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -249,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -309,6 +354,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosMyinsta/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iosMyinsta/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -338,6 +384,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosMyinsta/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iosMyinsta/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

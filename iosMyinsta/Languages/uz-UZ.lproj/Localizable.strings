@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  iosMyinsta
+
+  Created by Doniyor on 06/08/22.
+  
+*/
+
+"app_name" = "Instagram";
+"email" = "Email";
+"password" = "Parol";
+"cpassword" = "Parolni tasdiqlash";
+"fullname" = "Ism";
+"sign_in" = "Kirish";
+"sign_up" = "Ro'yhatdan o'ting";
+"dont_have_account" = "Ro'yhatdan o'tmaganmisiz?";
+"already_have_account" = "Agar ro'yhatdan o'tgan bo'lsangiz";
