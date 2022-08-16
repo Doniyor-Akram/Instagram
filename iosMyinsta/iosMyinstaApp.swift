@@ -14,7 +14,8 @@ struct iosMyinstaApp: App {
     var body: some Scene {
         WindowGroup {
             StarterView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(SessionServer())
+                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

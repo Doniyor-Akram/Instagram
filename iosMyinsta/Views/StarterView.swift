@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct StarterView: View {
+    
+    @EnvironmentObject var session: SessionServer
+    
     var body: some View {
         VStack {
-            SignInView()
+            if self.session.user != nil {
+                HomeView()
+            } else {
+                SignInView()
+            }
+        }
+        .onAppear {
+            session.listen()
         }
     }
 }
