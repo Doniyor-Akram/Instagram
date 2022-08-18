@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A821975BD1DDB1444A0260BB /* Pods_iosMyinsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055044C3F9C937F2064AE3AC /* Pods_iosMyinsta.framework */; };
+		E314987228AD17D600DB18AB /* MyPostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E314987128AD17D600DB18AB /* MyPostCellView.swift */; };
 		E382633E28A785EE00404A8E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E382633D28A785EE00404A8E /* HomeView.swift */; };
 		E382634328A7866F00404A8E /* SessionServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E382634228A7866F00404A8E /* SessionServer.swift */; };
 		E382634628A7872A00404A8E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = E382634528A7872A00404A8E /* Users.swift */; };
@@ -34,12 +35,16 @@
 		E3E1919328AB67E9000852C6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919228AB67E9000852C6 /* Post.swift */; };
 		E3E1919628AB6F7E000852C6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919528AB6F7E000852C6 /* PostCell.swift */; };
 		E3E1919828ABCD32000852C6 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919728ABCD32000852C6 /* LikesViewModel.swift */; };
+		E3E1919A28AC9D89000852C6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919928AC9D89000852C6 /* SearchViewModel.swift */; };
+		E3E1919C28ACA117000852C6 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919B28ACA117000852C6 /* UserCellView.swift */; };
+		E3E1919E28ACA827000852C6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919D28ACA827000852C6 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		055044C3F9C937F2064AE3AC /* Pods_iosMyinsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosMyinsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A649B0FE18BD9F161D83F81 /* Pods-iosMyinsta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosMyinsta.debug.xcconfig"; path = "Target Support Files/Pods-iosMyinsta/Pods-iosMyinsta.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD18C315890EC31877998D3 /* Pods-iosMyinsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosMyinsta.release.xcconfig"; path = "Target Support Files/Pods-iosMyinsta/Pods-iosMyinsta.release.xcconfig"; sourceTree = "<group>"; };
+		E314987128AD17D600DB18AB /* MyPostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCellView.swift; sourceTree = "<group>"; };
 		E382633D28A785EE00404A8E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E382634228A7866F00404A8E /* SessionServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionServer.swift; sourceTree = "<group>"; };
 		E382634528A7872A00404A8E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -70,6 +75,9 @@
 		E3E1919228AB67E9000852C6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E3E1919528AB6F7E000852C6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		E3E1919728ABCD32000852C6 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
+		E3E1919928AC9D89000852C6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E3E1919B28ACA117000852C6 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		E3E1919D28ACA827000852C6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				E3E1919028AB6796000852C6 /* FeedViewModel.swift */,
+				E3E1919928AC9D89000852C6 /* SearchViewModel.swift */,
 				E3E1919728ABCD32000852C6 /* LikesViewModel.swift */,
+				E3E1919D28ACA827000852C6 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				E3E1919528AB6F7E000852C6 /* PostCell.swift */,
+				E3E1919B28ACA117000852C6 /* UserCellView.swift */,
+				E314987128AD17D600DB18AB /* MyPostCellView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -357,14 +369,18 @@
 				E382634C28A7D69C00404A8E /* HomeUploadView.swift in Sources */,
 				E39EE27A289EA75200EA0E7E /* SignInView.swift in Sources */,
 				E382635428A7E65600404A8E /* ImagePickerView.swift in Sources */,
+				E314987228AD17D600DB18AB /* MyPostCellView.swift in Sources */,
 				E39EE26C289EA6D600EA0E7E /* Persistence.swift in Sources */,
+				E3E1919C28ACA117000852C6 /* UserCellView.swift in Sources */,
 				E382635028A7D6CC00404A8E /* HomeProfileView.swift in Sources */,
 				E39EE278289EA74A00EA0E7E /* StarterView.swift in Sources */,
 				E382634E28A7D6B800404A8E /* HomeLikesView.swift in Sources */,
 				E39EE28C289EFBCB00EA0E7E /* SelectLanguage.swift in Sources */,
 				E382634828A7D67000404A8E /* HomeFeedView.swift in Sources */,
 				E382635228A7E53300404A8E /* Coordinator.swift in Sources */,
+				E3E1919E28ACA827000852C6 /* ProfileViewModel.swift in Sources */,
 				E382634328A7866F00404A8E /* SessionServer.swift in Sources */,
+				E3E1919A28AC9D89000852C6 /* SearchViewModel.swift in Sources */,
 				E3E1919628AB6F7E000852C6 /* PostCell.swift in Sources */,
 				E39EE27E289EBCC100EA0E7E /* SignUpView.swift in Sources */,
 				E39EE27C289EB73600EA0E7E /* Utilits.swift in Sources */,

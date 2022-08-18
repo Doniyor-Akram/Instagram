@@ -36,7 +36,7 @@ struct HomeView: View {
                     Image(systemName: "heart")
                 }.tag(3)
             
-            HomeProfileView()
+            HomeProfileView(level: 2)
                 .font(.system(size: 13, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person")
