@@ -15,3 +15,9 @@
 "sign_up" = "Ro'yhatdan o'ting";
 "dont_have_account" = "Ro'yhatdan o'tmaganmisiz?";
 "already_have_account" = "Agar ro'yhatdan o'tgan bo'lsangiz";
+"comment" = "Bugun nechta suratga tushdingiz?";
+"following" = "Ergashishlar";
+"followers" = "Ergashuvchilar";
+"posts" = "Postlar";
+"caption" = "Sarlavha";
+"search_for_users" = "Foydalanuvchilarni qidirish";

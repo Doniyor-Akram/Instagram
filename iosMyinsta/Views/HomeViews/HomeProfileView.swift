@@ -21,7 +21,7 @@ struct HomeProfileView: View {
     
     //Operators of Scroll View
     @State var level: Int
-    @State var change: Bool = true
+    @State var change: Bool = false
     
     @State var columnsOne: [GridItem] = [
         GridItem.init(.flexible(minimum: UIScreen.width), spacing: nil, alignment: nil)
@@ -122,7 +122,7 @@ struct HomeProfileView: View {
                                     .font(.headline)
                                     .fontWeight(.semibold)
                                 
-                                Text("Posts")
+                                Text("posts")
                                     .font(.callout)
                                     .foregroundColor(.gray)
                             }
@@ -140,7 +140,7 @@ struct HomeProfileView: View {
                                     .font(.headline)
                                     .fontWeight(.semibold)
                                 
-                                Text("Followers")
+                                Text("followers")
                                     .font(.callout)
                                     .foregroundColor(.gray)
                             }
@@ -157,7 +157,7 @@ struct HomeProfileView: View {
                                     .font(.headline)
                                     .fontWeight(.semibold)
                                 
-                                Text("Following")
+                                Text("following")
                                     .font(.callout)
                                     .foregroundColor(.gray)
                             }
@@ -171,8 +171,8 @@ struct HomeProfileView: View {
                 HStack {
                     // First button
                     Button {
-                        self.change.toggle()
                         self.level = 1
+                        self.change = true
                     } label: {
                         Image("ic_splitscreen")
                             .resizable()
@@ -184,8 +184,8 @@ struct HomeProfileView: View {
                     
                     // Second button
                     Button {
-                        self.change.toggle()
                         self.level = 2
+                        self.change = true
                     } label: {
                         Image("ic_grid")
                             .resizable()
@@ -197,8 +197,8 @@ struct HomeProfileView: View {
                     
                     // Third button
                     Button {
-                        self.change.toggle()
                         self.level = 3
+                        self.change = true
                     } label: {
                         Image("ic_gridThree")
                             .resizable()
@@ -212,9 +212,9 @@ struct HomeProfileView: View {
                 
                 // MARK: ScrollView
                 ScrollView {
-                    LazyVGrid(columns: change ? columnsTwo : postGrid(), spacing: 0) {
+                    LazyVGrid(columns: change ? postGrid() : columnsTwo, spacing: 0) {
                         ForEach(viewModel.items, id: \.self) { item in
-                            MyPostCellView(post: item, length: postSize())
+                            MyPostCellView(post: item, length: posSize())
                         }
                     }
                 }
@@ -240,13 +240,21 @@ struct HomeProfileView: View {
     }
     
     // MARK: Post size method
-    func postSize() -> CGFloat {
-        if level == 1 {
-            return UIScreen.width / CGFloat(level) - 6
-        } else if level == 2 {
-            return UIScreen.width / CGFloat(level) - 5
+    func posSize() -> CGFloat {
+        var widthSize: CGFloat? = nil
+        
+        switch level {
+        case 1:
+            widthSize = UIScreen.width / CGFloat(level) - 6
+        case 2:
+            widthSize = UIScreen.width / CGFloat(level) - 5
+        case 3:
+            widthSize = UIScreen.width / CGFloat(level) - 5
+        default:
+            print("Wrong number!")
         }
-        return UIScreen.width / CGFloat(level) - 5
+        
+        return widthSize!
     }
     
     // MARK: Grid size method

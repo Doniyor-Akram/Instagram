@@ -60,9 +60,9 @@ struct SignUpView: View {
                             .cornerRadius(8)
                     }
                     
-                    // Sign In button
+                    // Sign Up button
                     Button {
-                        // Sign in
+                        // Sign up
                     } label: {
                         HStack{
                             Spacer()

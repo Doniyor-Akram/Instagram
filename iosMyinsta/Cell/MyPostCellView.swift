@@ -20,7 +20,7 @@ struct MyPostCellView: View {
                 .scaledToFit()
                 .cornerRadius(10)
             
-            Text("Make a symbolic breakpoint at pictures")
+            Text("comment")
                 .foregroundColor(.black)
                 .font(.caption)
                 .frame(width: length)

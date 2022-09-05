@@ -66,7 +66,7 @@ struct HomeUploadView: View {
                     .background(Color.gray.opacity(0.2))
                     
                     VStack {
-                        TextField("Caption", text: $caption)
+                        TextField("caption", text: $caption)
                             .font(Font.system(size: 17, design: .default))
                             .frame(height: 45)
                         

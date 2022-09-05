@@ -38,6 +38,7 @@
 		E3E1919A28AC9D89000852C6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919928AC9D89000852C6 /* SearchViewModel.swift */; };
 		E3E1919C28ACA117000852C6 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919B28ACA117000852C6 /* UserCellView.swift */; };
 		E3E1919E28ACA827000852C6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E1919D28ACA827000852C6 /* ProfileViewModel.swift */; };
+		E3E6759D28BDBDD400DBD059 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3E6759C28BDBDD400DBD059 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		E3E1919928AC9D89000852C6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E3E1919B28ACA117000852C6 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
 		E3E1919D28ACA827000852C6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E3E6759C28BDBDD400DBD059 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +162,10 @@
 				E39EE27F289EE4FA00EA0E7E /* Languages */,
 				E39EE287289EE8C300EA0E7E /* Fonts */,
 				E39EE262289EA6D600EA0E7E /* iosMyinstaApp.swift */,
-				E39EE28A289EE9B400EA0E7E /* Info.plist */,
-				E39EE266289EA6D600EA0E7E /* Assets.xcassets */,
 				E39EE26B289EA6D600EA0E7E /* Persistence.swift */,
+				E39EE266289EA6D600EA0E7E /* Assets.xcassets */,
+				E3E6759C28BDBDD400DBD059 /* GoogleService-Info.plist */,
+				E39EE28A289EE9B400EA0E7E /* Info.plist */,
 				E39EE26D289EA6D600EA0E7E /* iosMyinsta.xcdatamodeld */,
 				E39EE268289EA6D600EA0E7E /* Preview Content */,
 			);
@@ -309,6 +312,7 @@
 			files = (
 				E39EE26A289EA6D600EA0E7E /* Preview Assets.xcassets in Resources */,
 				E39EE282289EE55200EA0E7E /* Localizable.strings in Resources */,
+				E3E6759D28BDBDD400DBD059 /* GoogleService-Info.plist in Resources */,
 				E39EE267289EA6D600EA0E7E /* Assets.xcassets in Resources */,
 				E39EE289289EE8FA00EA0E7E /* Billabong.ttf in Resources */,
 			);
@@ -553,7 +557,7 @@
 				PRODUCT_NAME = Instagram;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -586,7 +590,7 @@
 				PRODUCT_NAME = Instagram;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -79,7 +79,7 @@ struct PostCell: View {
             .padding(.top, 15)
             
             HStack {
-                Text("Catch up on the Black Founders digital accelerator program for high potential Seed to Series A tech startups and prepare for the next opening.")
+                Text("comment")
                     .multilineTextAlignment(.leading)
                     .font(.caption)
             }

@@ -15,3 +15,9 @@
 "sign_up" = "Sign Up";
 "dont_have_account" = "Don't have an account?";
 "already_have_account" = "Already have an account?";
+"comment" = "How many photographs have you taken today?";
+"following" = "Following";
+"followers" = "Followers";
+"posts" = "Posts";
+"caption" = "Caption";
+"search_for_users" = "Search for users";

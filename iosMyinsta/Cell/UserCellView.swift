@@ -42,7 +42,7 @@ struct UserCellView: View {
             Button {
                 
             } label: {
-                Text("Following")
+                Text("following")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.black.opacity(0.5))

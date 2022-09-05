@@ -15,7 +15,7 @@ struct HomeSearchView: View {
             ZStack {
                 VStack {
                     HStack {
-                        TextField("Search for users", text: $keyword)
+                        TextField("search_for_users", text: $keyword)
                             .padding(.leading, 15)
                             .frame(height: 45)
                             .font(.callout)
@@ -42,7 +42,6 @@ struct HomeSearchView: View {
                             UserCellView(user: item)
                                 .listRowInsets(EdgeInsets())
                                 .buttonStyle(PlainButtonStyle())
-                                
                         }
                     }
                     .listStyle(PlainListStyle())
