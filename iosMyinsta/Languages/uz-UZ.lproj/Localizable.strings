@@ -21,3 +21,7 @@
 "posts" = "Postlar";
 "caption" = "Sarlavha";
 "search_for_users" = "Foydalanuvchilarni qidirish";
+"choice" = "Tanlov";
+"select_one" = "Quyidagilardan birini tanlang:";
+"pick_photo" = "Galereyadan tanlash";
+"take_photo" = "Suratga olish";

@@ -11,11 +11,12 @@ import SDWebImageSwiftUI
 struct PostCell: View {
     var post: Post
     
+    // MARK: - Body
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 VStack {
-                    Image("ic_profile")
+                    Image("ic_profile") // Profile image
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 45, height: 45)
@@ -26,12 +27,13 @@ struct PostCell: View {
                         .stroke(Utilits.colorTwo, lineWidth: 2)
                 )
                 
+                // Name and Date
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(post.title!)
+                    Text(post.title!) // User's name
                         .font(.headline)
                         .fontWeight(.semibold)
                         
-                    Text(post.content!)
+                    Text(post.content!) // Date of post
                         .font(.callout)
                         .foregroundColor(.gray)
                 }
@@ -39,6 +41,7 @@ struct PostCell: View {
                 
                 Spacer()
                 
+                // More button
                 Button {
                     
                 } label: {
@@ -49,12 +52,16 @@ struct PostCell: View {
             .padding(.horizontal, 15)
             .padding(.top, 15)
             
+            // MARK: Image
             WebImage(url: URL(string: post.imageURL!))
                 .resizable()
                 .scaledToFit()
                 .padding(.top, 15)
             
+            // Like, Share buttons and Comments
             HStack(spacing: 15) {
+                
+                // Like button
                 Button {
                     
                 } label: {
@@ -62,7 +69,8 @@ struct PostCell: View {
                         .font(.body)
                         .foregroundColor(.black)
                 }
-
+                
+                // Share button
                 Button {
                     
                 } label: {
@@ -78,10 +86,12 @@ struct PostCell: View {
             .padding(.horizontal, 15)
             .padding(.top, 15)
             
+            // MARK: Comments field
             HStack {
                 Text("comment")
                     .multilineTextAlignment(.leading)
-                    .font(.caption)
+                    .font(.callout)
+                Spacer()
             }
             .padding()
         }
@@ -91,5 +101,7 @@ struct PostCell: View {
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
         PostCell(post: Post(title: "Martin Taylor", content: "July 7, 2022", imageURL: Utilits.image1))
+            .environment(\.locale, .init(identifier: "uz"))
+            
     }
 }

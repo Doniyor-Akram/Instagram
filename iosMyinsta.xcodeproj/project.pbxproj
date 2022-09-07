@@ -102,17 +102,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E382633C28A785CD00404A8E /* HomeViews */ = {
+		E382633C28A785CD00404A8E /* HomeTabViews */ = {
 			isa = PBXGroup;
 			children = (
-				E382633D28A785EE00404A8E /* HomeView.swift */,
 				E382634728A7D67000404A8E /* HomeFeedView.swift */,
 				E382634928A7D68C00404A8E /* HomeSearchView.swift */,
 				E382634B28A7D69C00404A8E /* HomeUploadView.swift */,
 				E382634D28A7D6B800404A8E /* HomeLikesView.swift */,
 				E382634F28A7D6CC00404A8E /* HomeProfileView.swift */,
 			);
-			path = HomeViews;
+			path = HomeTabViews;
 			sourceTree = "<group>";
 		};
 		E382633F28A7864300404A8E /* Network */ = {
@@ -186,7 +185,8 @@
 				E39EE277289EA74A00EA0E7E /* StarterView.swift */,
 				E39EE279289EA75200EA0E7E /* SignInView.swift */,
 				E39EE27D289EBCC100EA0E7E /* SignUpView.swift */,
-				E382633C28A785CD00404A8E /* HomeViews */,
+				E382633D28A785EE00404A8E /* HomeView.swift */,
+				E382633C28A785CD00404A8E /* HomeTabViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";

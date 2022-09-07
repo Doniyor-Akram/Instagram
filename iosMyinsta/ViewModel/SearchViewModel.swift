@@ -11,7 +11,7 @@ class  SearchViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var items: [Users] = []
     
-    func apiUserList(completion: @escaping () -> ()) {
+    func apiUserList(completion: @escaping () -> Void) {
         isLoading = true
         items.removeAll()
         

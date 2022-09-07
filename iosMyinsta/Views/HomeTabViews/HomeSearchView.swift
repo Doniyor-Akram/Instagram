@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct HomeSearchView: View {
+    // MARK: Operators
     @ObservedObject var viewModel = SearchViewModel()
     @State private var keyword: String = ""
+    
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
+                    // Search textfield
                     HStack {
                         TextField("search_for_users", text: $keyword)
                             .padding(.leading, 15)
@@ -22,6 +26,7 @@ struct HomeSearchView: View {
                         
                         Spacer()
                         
+                        // Magnifier button
                         Button {
                             
                         } label: {
@@ -34,9 +39,9 @@ struct HomeSearchView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black.opacity(0.5), lineWidth: 0.5)
                     )
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 20)
+                    .padding(.all, 20)
                     
+                    // List of followings
                     List {
                         ForEach(viewModel.items, id: \.self) { item in
                             UserCellView(user: item)
@@ -52,7 +57,11 @@ struct HomeSearchView: View {
         }
         .onAppear() {
             viewModel.apiUserList {
-                print(viewModel.items.count)
+                if viewModel.items.count != 1 {
+                    print("HomeSearchView items are \(viewModel.items.count)")
+                } else {
+                    print("HomeSearchView item is \(viewModel.items.count)")
+                }
             }
         }
     }
@@ -61,5 +70,6 @@ struct HomeSearchView: View {
 struct HomeSearchView_Previews: PreviewProvider {
     static var previews: some View {
         HomeSearchView()
+            .environment(\.locale, .init(identifier: "uz"))
     }
 }

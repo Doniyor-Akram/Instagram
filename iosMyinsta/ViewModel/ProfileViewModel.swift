@@ -11,10 +11,11 @@ class ProfileViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var items: [Post] = []
     
-    func apiPostList(completion: @escaping () -> ()) {
+    func apiPostList(completion: @escaping () -> Void) {
         isLoading = true
         items.removeAll()
         
+        self.items.append(Post(title: "Akbar Umarov", content: "August 14, 2022", imageURL: Utilits.image2))
         self.items.append(Post(title: "Michael Ubaru", content: "August 2, 2022", imageURL: Utilits.image1))
         self.items.append(Post(title: "Lola Rasulova", content: "August 4, 2022", imageURL: Utilits.image2))
         self.items.append(Post(title: "Jony Vines", content: "August 5, 2022", imageURL: Utilits.image1))

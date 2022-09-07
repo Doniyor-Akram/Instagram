@@ -9,24 +9,33 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct MyPostCellView: View {
+    // MARK: Operators
     var post: Post
     var length: CGFloat
     
+    // MARK: - Body
     var body: some View {
         VStack(spacing: 0) {
+            // Image
             WebImage(url: URL(string: post.imageURL!))
                 .resizable()
                 .frame(width: length, height: length)
                 .scaledToFit()
                 .cornerRadius(10)
             
-            Text("comment")
-                .foregroundColor(.black)
-                .font(.caption)
-                .frame(width: length)
-                .padding(.top, 10)
-                .padding(.bottom, 20)
-                .lineLimit(5)
+            // Comment
+            HStack {
+                Text("comment")
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.black)
+                    .font(.callout)
+                    .padding(.leading, 5)
+                    .padding(.top, 10)
+                    .padding(.bottom, 20)
+                    .lineLimit(5)
+                
+                Spacer()
+            }
         }
     }
 }

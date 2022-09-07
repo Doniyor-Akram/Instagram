@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct SignInView: View {
+    // MARK: Operators
     @State private var email: String = ""
     @State private var password: String = ""
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ZStack {
-                // Background mix color
-                LinearGradient(gradient: Gradient(colors: [Utilits.colorOne, Utilits.colorTwo]),
-                               startPoint: .topLeading,
-                               endPoint: .bottomTrailing
+                // Background mix colors
+                LinearGradient(
+                    gradient: Gradient(colors: [Utilits.colorOne, Utilits.colorTwo]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
                 )
                 
                 VStack(spacing: 10) {
@@ -25,19 +28,19 @@ struct SignInView: View {
                     
                     // TextField and SecureField
                     Group {
-                        Text("app_name")
+                        Text("app_name") // Instagram Logo
                             .font(Font.custom("Billabong", size: 75))
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.bottom, 15)
                         
-                        TextField("email", text: $email)
+                        TextField("email", text: $email) // Email
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
                             .cornerRadius(8)
                         
-                        SecureField("password", text: $password)
+                        SecureField("password", text: $password) // Password
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
@@ -48,7 +51,7 @@ struct SignInView: View {
                     Button {
                         // Sign in
                     } label: {
-                        HStack{
+                        HStack {
                             Spacer()
                             Text("sign_in")
                                 .fontWeight(.semibold)
@@ -65,7 +68,7 @@ struct SignInView: View {
                     
                     Spacer()
                     
-                    // Text and Sign Up button on bottom
+                    // Bottom content: Text and Sign Up button
                     VStack {
                         HStack {
                             Text("dont_have_account")
@@ -79,13 +82,13 @@ struct SignInView: View {
                             }
                         }
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 65)
+                    .frame(maxWidth: .infinity, maxHeight: 65) // Frame bottom content
                 }
                 .padding()
             }
             .edgesIgnoringSafeArea(.all)
         }
-        .accentColor(.white)
+        .accentColor(.white) // Back button color
     }
 }
 

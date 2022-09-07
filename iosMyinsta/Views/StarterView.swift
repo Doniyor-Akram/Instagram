@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct StarterView: View {
-    
+    // MARK: Operators
     @EnvironmentObject var session: SessionServer
     
+    // MARK: - Body
     var body: some View {
         VStack {
             if self.session.user != nil {

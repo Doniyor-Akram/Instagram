@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct HomeProfileView: View {
-    
+    // MARK: Operators
     @ObservedObject var viewModel = ProfileViewModel()
     @State private var email: String = "winston.cross@gmail.com"
+    @State var showActionSheet: Bool = false
     
     // Operators of Profile image
     @State private var selectedImage: UIImage?
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State private var isImagePickerDisplay: Bool = false
-    
-    @State var showActionSheet: Bool = false
     
     //Operators of Scroll View
     @State var level: Int
@@ -38,71 +37,76 @@ struct HomeProfileView: View {
         GridItem.init(.flexible(minimum: UIScreen.width / 3), spacing: -2, alignment: nil)
     ]
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
                 
-                // MARK: Profile image and plus button
-                ZStack(alignment: .bottomTrailing) {
-                    if selectedImage != nil {
-                        Image(uiImage: selectedImage!)
-                            .resizable()
-                            .scaledToFill()
-                            .clipShape(Circle())
-                            .frame(width: 75, height: 75)
-                            .padding(.all, 2)
-                            .background(
-                                RoundedRectangle(cornerRadius: 40)
-                                    .stroke(Utilits.colorTwo, lineWidth: 1.5)
-                            )
-                        
-                        Button {
-                            self.showActionSheet.toggle()
-                        } label: {
-                            Image(systemName: "plus.circle.fill")
+                // MARK: Profile image
+                Group {
+                    ZStack(alignment: .bottomTrailing) {
+                        if selectedImage != nil {
+                            Image(uiImage: selectedImage!)
                                 .resizable()
-                                .frame(width: 25, height: 25)
+                                .scaledToFill()
+                                .clipShape(Circle())
+                                .frame(width: 75, height: 75)
+                                .padding(.all, 2)
                                 .background(
-                                    Circle()
-                                        .foregroundColor(.white)
+                                    RoundedRectangle(cornerRadius: 40)
+                                        .stroke(Utilits.colorTwo, lineWidth: 1.5)
                                 )
-                        }
-                        .actionSheet(isPresented: $showActionSheet, content: actionSheet)
-                        .sheet(isPresented: self.$isImagePickerDisplay) {
-                            ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
-                        }
-                    } else {
-                        Image("ic_profile")
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(Circle())
-                            .frame(width: 75, height: 75)
-                            .padding(.all, 2)
-                            .background(
-                                RoundedRectangle(cornerRadius: 40)
-                                    .stroke(Utilits.colorTwo, lineWidth: 1.5)
-                            )
-                        
-                        Button {
-                            self.showActionSheet.toggle()
-                        } label: {
-                            Image(systemName: "plus.circle.fill")
+                            
+                            // MARK: Plus button
+                            Button {
+                                self.showActionSheet.toggle()
+                            } label: {
+                                Image(systemName: "plus.circle.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .background(
+                                        Circle()
+                                            .foregroundColor(.white)
+                                    )
+                            }
+                            .actionSheet(isPresented: $showActionSheet, content: actionSheet)
+                            .sheet(isPresented: self.$isImagePickerDisplay) {
+                                ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+                            }
+                        } else {
+                            // MARK: By default image
+                            Image("ic_profile")
                                 .resizable()
-                                .frame(width: 25, height: 25)
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 75, height: 75)
+                                .padding(.all, 2)
                                 .background(
-                                    Circle()
-                                        .foregroundColor(.white)
+                                    RoundedRectangle(cornerRadius: 40)
+                                        .stroke(Utilits.colorTwo, lineWidth: 1.5)
                                 )
-                        }
-                        .actionSheet(isPresented: $showActionSheet, content: actionSheet)
-                        .sheet(isPresented: self.$isImagePickerDisplay) {
-                            ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+                            // MARK: Plus button
+                            Button {
+                                self.showActionSheet.toggle()
+                            } label: {
+                                Image(systemName: "plus.circle.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .background(
+                                        Circle()
+                                            .foregroundColor(.white)
+                                    )
+                            }
+                            .actionSheet(isPresented: $showActionSheet, content: actionSheet)
+                            .sheet(isPresented: self.$isImagePickerDisplay) {
+                                ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+                            }
                         }
                     }
                 }
                 
-                // MARK: Profile name, email and Statistics
                 Group {
+                    // MARK: Profile name
                     VStack {
                         Text("Winston Cross")
                             .font(.callout)
@@ -114,8 +118,9 @@ struct HomeProfileView: View {
                             .font(.callout)
                             .foregroundColor(.gray)
                         
-                        // Statistics
+                        // MARK: Statistics
                         HStack {
+                            // Posts count
                             VStack {
                                 Text("782")
                                     .foregroundColor(.black)
@@ -128,12 +133,13 @@ struct HomeProfileView: View {
                             }
                             .frame(maxWidth: UIScreen.width / 3, maxHeight: 60)
                             
+                            // Vertical divider
                             VStack {
                             }
                             .frame(maxWidth: 1, maxHeight: 25)
                             .background(Color.gray.opacity(0.5))
                             
-                            
+                            // MARK: Followers count
                             VStack {
                                 Text("8,326")
                                     .foregroundColor(.black)
@@ -146,11 +152,13 @@ struct HomeProfileView: View {
                             }
                             .frame(maxWidth: UIScreen.width / 3, maxHeight: 60)
                             
+                            // Vertical divider
                             VStack {
                             }
                             .frame(maxWidth: 1, maxHeight: 25)
                             .background(Color.gray.opacity(0.5))
                             
+                            // MARK: Following count
                             VStack {
                                 Text("13")
                                     .foregroundColor(.black)
@@ -182,7 +190,7 @@ struct HomeProfileView: View {
                             .shadow(color: .black.opacity(0.4), radius: 6, x: 5, y: 5)
                     }
                     
-                    // Second button
+                    // MARK: Second button
                     Button {
                         self.level = 2
                         self.change = true
@@ -195,7 +203,7 @@ struct HomeProfileView: View {
                             .shadow(color: .black.opacity(0.4), radius: 6, x: 5, y: 5)
                     }
                     
-                    // Third button
+                    // MARK: Third button
                     Button {
                         self.level = 3
                         self.change = true
@@ -211,13 +219,14 @@ struct HomeProfileView: View {
                 .padding(.all, 10)
                 
                 // MARK: ScrollView
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: change ? postGrid() : columnsTwo, spacing: 0) {
                         ForEach(viewModel.items, id: \.self) { item in
                             MyPostCellView(post: item, length: posSize())
                         }
                     }
                 }
+                .cornerRadius(10)
                 .padding(.top, 10)
             }
             .navigationTitle("Profile")
@@ -232,9 +241,14 @@ struct HomeProfileView: View {
                 }
             }
         }
+        // MARK: onAppear
         .onAppear() {
             viewModel.apiPostList {
-                print(viewModel.items.count)
+                if viewModel.items.count != 1 {
+                    print("HomeProfileView items are \(viewModel.items.count)")
+                } else {
+                    print("HomeProfileView item is \(viewModel.items.count)")
+                }
             }
         }
     }
@@ -276,15 +290,12 @@ struct HomeProfileView: View {
     
     // MARK: ActionSheet method
     func actionSheet() -> ActionSheet {
-        let title: String = "Выбор"
-        let message: String = "Выберите один из следующих:"
-        
-        let pickPhoto: ActionSheet.Button = .default(Text("Pick Photo")) {
+        let pickPhoto: ActionSheet.Button = .default(Text("pick_photo")) {
             self.sourceType = .photoLibrary
             self.isImagePickerDisplay.toggle()
         }
         
-        let takePhoto: ActionSheet.Button = .default(Text("Take Photo")) {
+        let takePhoto: ActionSheet.Button = .default(Text("take_photo")) {
             self.sourceType = .camera
             self.isImagePickerDisplay.toggle()
         }
@@ -292,8 +303,8 @@ struct HomeProfileView: View {
         let cancel: ActionSheet.Button = .cancel()
         
         return ActionSheet(
-            title: Text(title),
-            message: Text(message),
+            title: Text("choice"),
+            message: Text("select_one"),
             buttons: [pickPhoto, takePhoto, cancel]
         )
     }

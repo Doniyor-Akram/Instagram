@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
+    // MARK: Operators
     @Environment(\.presentationMode) var presentationMode
     
     @State private var fullname: String = ""
@@ -15,13 +16,15 @@ struct SignUpView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ZStack {
-                // Background mix color
-                LinearGradient(gradient: Gradient(colors: [Utilits.colorOne, Utilits.colorTwo]),
-                               startPoint: .topLeading,
-                               endPoint: .bottomTrailing
+                // Background mix colors
+                LinearGradient(
+                    gradient: Gradient(colors: [Utilits.colorOne, Utilits.colorTwo]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
                 )
                 
                 VStack(spacing: 10) {
@@ -29,31 +32,31 @@ struct SignUpView: View {
                     
                     // TextField and SecureField
                     Group {
-                        Text("app_name")
+                        Text("app_name") // Instagram Logo
                             .font(Font.custom("Billabong", size: 75))
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.bottom, 15)
                         
-                        TextField("fullname", text: $fullname)
+                        TextField("fullname", text: $fullname) // Fullname
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
                             .cornerRadius(8)
                         
-                        TextField("email", text: $email)
+                        TextField("email", text: $email) // Email
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
                             .cornerRadius(8)
                         
-                        SecureField("password", text: $password)
+                        SecureField("password", text: $password) // Password
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
                             .cornerRadius(8)
                         
-                        SecureField("cpassword", text: $confirmPassword)
+                        SecureField("cpassword", text: $confirmPassword) // Confirm password
                             .frame(height: 45)
                             .padding(.leading, 10)
                             .background(Color.white.opacity(0.6))
@@ -80,7 +83,7 @@ struct SignUpView: View {
                     }
                     Spacer()
                     
-                    // Text and Sign Up button on bottom
+                    // Bottom content: Text and Sign Up button
                     VStack {
                         HStack {
                             Text("already_have_account")

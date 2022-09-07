@@ -21,3 +21,7 @@
 "posts" = "Posts";
 "caption" = "Caption";
 "search_for_users" = "Search for users";
+"choice" = "Choice";
+"select_one" = "Select one of the following:";
+"pick_photo" = "Pick photo";
+"take_photo" = "Take photo";
